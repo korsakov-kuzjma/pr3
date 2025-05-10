@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:,"> <!-- Prevent favicon request -->
+</head>
+<body>
+    <header class="app-header">
+        <h1>Modern Web Demo</h1>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+        <button id="notify-btn">Show Notification</button>
+        <button id="geolocation-btn">Get Location</button>
+    </header>
+
+    <main class="app-main">
+        <section class="web-components">
+            <h2>Web Components</h2>
+            <custom-card data-title="Web Component" data-content="This is a custom element!"></custom-card>
+        </section>
+
+        <section class="canvas-demo">
+            <h2>Canvas Animation</h2>
+            <canvas id="animation-canvas"></canvas>
+        </section>
+
+        <section class="fetch-demo">
+            <h2>API Fetching</h2>
+            <button id="fetch-btn">Fetch Random User</button>
+            <div id="user-data" class="user-card"></div>
+        </section>
+
+        <section class="workers-demo">
+            <h2>Web Workers</h2>
+            <input type="number" id="worker-input" value="1000000">
+            <button id="worker-btn">Calculate in Worker</button>
+            <div id="worker-output"></div>
+        </section>
+
+        <section class="drag-drop">
+            <h2>Drag & Drop</h2>
+            <div class="drop-zone" id="drop-zone">
+                <p>Drop files here</p>
+            </div>
+            <ul id="file-list"></ul>
+        </section>
+
+        <section class="speech-recognition">
+            <h2>Speech Recognition</h2>
+            <button id="speech-btn">Start Listening</button>
+            <div id="speech-output"></div>
+        </section>
+
+        <section class="media-devices">
+            <h2>Media Devices</h2>
+            <button id="camera-btn">Access Camera</button>
+            <video id="camera-feed" autoplay muted></video>
+        </section>
+
+        <section class="storage">
+            <h2>Local Storage</h2>
+            <input type="text" id="storage-input" placeholder="Enter something to save">
+            <button id="storage-save">Save</button>
+            <button id="storage-load">Load</button>
+            <div id="storage-output"></div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>PWA ready - Installable</p>
+        <button id="install-btn" hidden>Install App</button>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
