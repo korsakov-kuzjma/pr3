@@ -19,7 +19,7 @@
 2. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/ваш-репозиторий/static-server.git
+   git clone https://github.com/korsakov-kuzjma/static-server.git
    cd static-server
    ```
 
